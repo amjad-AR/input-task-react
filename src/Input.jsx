@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function Input() {
   const [name, setName] = useState("Your name");
   const [savedName, setSavedName] = useState([]);
-  const [editIndex, setEditIndex] = useState(null); 
+  const [editIndex, setEditIndex] = useState(null);
 
   const handleFocus = () => {
     if (name === "Your name") setName("");
@@ -19,13 +19,11 @@ function Input() {
     if (name.trim() === "" || name === "Your name") return;
 
     if (editIndex !== null) {
-      
       setSavedName((prev) =>
         prev.map((item, index) => (index === editIndex ? name : item))
       );
       setEditIndex(null);
     } else {
-      
       setSavedName((prev) => [...prev, name]);
     }
 
@@ -86,7 +84,6 @@ function Input() {
             Saved Names:
           </h3>
 
-          {/* سكّرول بس للقائمة */}
           <div className="flex flex-col gap-3 max-h-40 overflow-y-scroll p-3">
             {savedName.map((n, index) => (
               <div
