@@ -84,7 +84,7 @@ function Input() {
             Saved Names:
           </h3>
 
-          <div className="flex flex-col gap-3 max-h-40 overflow-y-scroll p-3">
+          <div className="flex flex-col gap-3 max-h-100 overflow-y-scroll p-3 ">
             {savedName.map((n, index) => (
               <div
                 key={index}
